@@ -26,7 +26,8 @@ public class WaterFallColiderDirector : GimmickBase {
     public override void ExecutionGimmick()
     {
         // todo
-        //  滝パーティクルの実行
+        //  滝パーティクルの実行(Play on awake)
+
         //  滝パーティクルの色を変更
         //  橋のギミックを実行
         //  川の色を変える

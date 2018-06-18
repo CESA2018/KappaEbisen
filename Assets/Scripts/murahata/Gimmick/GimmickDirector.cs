@@ -8,11 +8,18 @@ public class GimmickDirector : MonoBehaviour {
 
     //  ギミックの基底クラス
     private GimmickBase gimmickBase;
-    
-    private Vector4 YELLOW = new Vector4(1, 1, 0, 1);
+
+    public enum GIMMICK_COLOR {
+        RED,
+        YELLOW,
+        BULE
+    }
+
 
     //  この色になったときにギミックを発動する
     [SerializeField]
+    private GIMMICK_COLOR gimmickColor;
+
     private Color color;
 
     //  ギミックが完了しているか
@@ -21,6 +28,21 @@ public class GimmickDirector : MonoBehaviour {
 	void Start () {
         gimmickBase = transform.GetComponent<GimmickBase>();
         finishGimmick = false;
+        
+        switch(gimmickColor)
+        {
+            case GIMMICK_COLOR.RED:
+                color = new Color(1, 0, 0, 1);
+                break;
+
+            case GIMMICK_COLOR.YELLOW:
+                color = new Color(1, 1, 0, 1);
+                break;
+
+            case GIMMICK_COLOR.BULE:
+                color = new Color(0, 0, 1, 1);
+                break;
+        }
 
     }
 	

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InitilizeColor : MonoBehaviour {
 
+    //public static readonly Color YELLOW = new Color(1, 1, 0, 1);
+    //public static readonly Color YELLOW_32 = new Color32(255, 255, 0, 255);
+
     private enum COLOR_TYPE
     {
         white,black,yellow,blue,red
