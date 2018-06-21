@@ -7,10 +7,13 @@ public class BridgeDirector : GimmickBase {
 
     //  移動後の座標
     [SerializeField]
-    private Vector3 position;
+    private Vector3 bridgePosition;
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private GameObject pond;
+
+    // Use this for initialization
+    void Start () {
 
 	}
 	
@@ -22,6 +25,10 @@ public class BridgeDirector : GimmickBase {
     //  ギミックを実行する
     public override void ExecutionGimmick()
     {
-        transform.DOMove(position, 1.0f);
+        transform.DOMove(bridgePosition, 3.0f);
+
+        //  池の色を変える
+        pond.GetComponent<Renderer>().material.color = Color.blue;
+
     }
 }

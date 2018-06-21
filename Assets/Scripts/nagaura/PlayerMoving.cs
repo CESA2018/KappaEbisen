@@ -40,6 +40,9 @@ public class PlayerMoving : MonoBehaviour
     public Vector3 m_movingVelocity;
     // 接地しているかどうか
     private bool m_isGrounded;
+    //  移動できるかどうか
+    public bool m_isMoved;
+
 
     // Use this for initialization
     void Start()
@@ -48,6 +51,8 @@ public class PlayerMoving : MonoBehaviour
         m_lengthFromCenter = transform.position.y + (transform.localScale.y * gameObject.GetComponent<BoxCollider>().center.y);
         // Rigidbodyの重力を無効にする
         m_rigidbody.useGravity = false;
+        //  移動できる
+        m_isMoved = true;
     }
 
     // Update is called once per frame
@@ -55,8 +60,12 @@ public class PlayerMoving : MonoBehaviour
     {
         // 接地しているか判定する
         ConfirmGrounding();
-        // 移動処理
-        Moving();
+
+        //  移動可能なら移動
+        if (m_isMoved){
+            // 移動処理
+            Moving();
+        }
         // 回転処理
         Rotate();
         // 接地していなかったら重力落下処理
