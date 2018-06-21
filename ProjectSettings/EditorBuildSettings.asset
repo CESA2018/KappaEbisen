@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scene/Title.unity
     guid: 6f5dca46f28df454ca6c61ef4a5e22db
   - enabled: 0
@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/murahata/TutorialStage.unity
     guid: 5443fd67916e6f54e8cb283f76493e95
+  - enabled: 1
+    path: Assets/Scene/ogisu/Play.unity
+    guid: 65e5d5f7665a7634cbfe4b37c50d8972
