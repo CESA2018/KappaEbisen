@@ -43,7 +43,9 @@ public class WaterFallDirector : GimmickBase {
 	
 	// Update is called once per frame
 	void Update () {
-
+        par.startColor = coliderBox.GetComponent<Renderer>().material.color;
+        trail.colorOverTrail = coliderBox.GetComponent<Renderer>().material.color;
+        trail.colorOverLifetime = coliderBox.GetComponent<Renderer>().material.color;
     }
 
     public override void ExecutionGimmick()

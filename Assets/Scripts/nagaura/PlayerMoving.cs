@@ -65,11 +65,13 @@ public class PlayerMoving : MonoBehaviour
         if (m_isMoved){
             // 移動処理
             Moving();
+
+            // 接地していなかったら重力落下処理
+            if (!m_isGrounded) FallingByGravity();
         }
         // 回転処理
         Rotate();
-        // 接地していなかったら重力落下処理
-        if (!m_isGrounded) FallingByGravity();
+
     }
 
     /// <summary>

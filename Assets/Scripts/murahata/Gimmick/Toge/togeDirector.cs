@@ -34,6 +34,7 @@ public class togeDirector : GimmickBase {
 
     private void Update()
     {
+
         //  ギミックが実行中
         if (isDuring)
         {
@@ -58,12 +59,13 @@ public class togeDirector : GimmickBase {
                 }
 
             }
-            // 　アルファを少しずつ薄くする
+
+            // 　色を変更する
             for (int i = 0; i < toge.Length; i++)
             {
                 toge[i].transform.GetComponent<Renderer>().material.color = new Color(1,0,0,alpha);
 
-                //  子供のトゲを取得する
+                //  子供のトゲ
                 foreach(Transform togeChild in toge[i].gameObject.transform)
                 {
                     var togeGo = togeChild.gameObject;
@@ -76,6 +78,20 @@ public class togeDirector : GimmickBase {
                 fireEffect[i].gameObject.SetActive(true);
             }
 
+        }
+        else // ギミック中ではないときは色を変更する
+        {
+            for (int i = 0; i < toge.Length; i++)
+            {
+                toge[i].transform.GetComponent<Renderer>().material.color = gameObject.GetComponent<Renderer>().material.color;
+
+                //  子供のトゲを取得する
+                foreach (Transform togeChild in toge[i].gameObject.transform)
+                {
+                    var togeGo = togeChild.gameObject;
+                    togeGo.transform.GetComponent<Renderer>().material.color = gameObject.GetComponent<Renderer>().material.color;
+                }
+            }
         }
     }
 

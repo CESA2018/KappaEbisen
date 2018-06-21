@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
 using System;
+using DG.Tweening;
 
 public class SpotLightController : GimmickBase {
 
@@ -14,12 +15,13 @@ public class SpotLightController : GimmickBase {
     private float interval;             // 点滅時間の指定
     [SerializeField]
     private bool flashFlg = false;
-
+    [SerializeField]
+    private GameObject wall;
+    [SerializeField]
+    private Vector3 movePos;
 
     void Start()
     {
-        directionalLight = GameObject.Find("Directional Light");
-
         flashLight.GetComponent<Light>().intensity = 0;
 
         var flashStream = Observable.Interval(TimeSpan.FromSeconds(UnityEngine.Random.Range(0.01f, 0.75f))).Where(_ => flashFlg == false);
@@ -51,5 +53,7 @@ public class SpotLightController : GimmickBase {
 
         directionalLight.GetComponent<Light>().intensity = 1;
         Debug.Log("FlashFinished");
+
+        wall.transform.DOMove(movePos,1.0f);
     }
 }

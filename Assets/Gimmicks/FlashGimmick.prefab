@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114522446003099620}
   m_Layer: 0
   m_Name: FlashGimmick
-  m_TagString: Untagged
+  m_TagString: Gimmick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1483568834919736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 54.15, y: 0.52, z: 51.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4027716302038654}
@@ -139,7 +139,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 30
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 83.85383
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -179,6 +179,8 @@ MonoBehaviour:
   minIntensity: 0
   maxIntensity: 30
   flashFlg: 0
+  wall: {fileID: 0}
+  movePos: {x: 50.3, y: 9.7, z: 53.76}
 --- !u!114 &114950821785157224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,5 +192,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a59f40ed25623438f95b365b82579b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 0, a: 1}
+  gimmickColor: 1
   finishGimmick: 0

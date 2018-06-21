@@ -24,8 +24,7 @@ public class Ladder : MonoBehaviour {
 
         if (isClimbing)
         {
-            rb.velocity = new Vector3(0, 0, 0);
-
+            rb.useGravity = false;
 
             if (Input.GetKey(KeyCode.W))
             {
@@ -38,5 +37,6 @@ public class Ladder : MonoBehaviour {
                 rb.transform.position = new Vector3(pos.x, pos.y - speed, pos.z);
             }
         }
-	}
+
+    }
 }

@@ -6,10 +6,17 @@ public class EndClimb : MonoBehaviour {
 
     [SerializeField]
     private GameObject ladder;
+    [SerializeField]
+    private GameObject player;
 
     private void OnTriggerEnter(Collider other)
     {
-        ladder.transform.GetComponent<Ladder>().isClimbing = false;
+        if (ladder.transform.GetComponent<Ladder>().isClimbing)
+        {
+            ladder.transform.GetComponent<Ladder>().isClimbing = false;
+            player.transform.GetComponent<PlayerMoving>().m_isMoved = true;
+        }
+
 
     }
 }
