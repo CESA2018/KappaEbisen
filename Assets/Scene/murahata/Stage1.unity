@@ -16315,6 +16315,7 @@ GameObject:
   - component: {fileID: 813902557}
   - component: {fileID: 813902563}
   - component: {fileID: 813902564}
+  - component: {fileID: 813902565}
   m_Layer: 8
   m_Name: player
   m_TagString: Untagged
@@ -16450,7 +16451,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_parretWorldPos: {fileID: 253005136}
   m_player: {fileID: 813902556}
+<<<<<<< HEAD
   m_normalAreaPos: {fileID: 1032585732}
+=======
+  m_playerPos: {x: 67.5, y: 1.549, z: 53.3}
+--- !u!114 &813902565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 813902556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2115ecc3adce7ac47bcdd352126e53f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 400a8308d44f0910650ffe32584c42a6746b7fce
 --- !u!1 &823313128
 GameObject:
   m_ObjectHideFlags: 0
