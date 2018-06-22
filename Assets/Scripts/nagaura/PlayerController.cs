@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    Vector4 m_color;
 
     // Use this for initialization
     void Start()
@@ -17,13 +17,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void SetColor(Vector4 color)
+    private void OnCollisionEnter(Collision collision)
     {
-        m_color = color;
-    }
-
-    public Vector4 GetColor()
-    {
-        return m_color;
+        if (collision.gameObject.tag == "Goal")
+        {
+            SceneManager.LoadScene("Clear");
+        }
     }
 }
