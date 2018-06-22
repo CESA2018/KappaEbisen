@@ -11,7 +11,7 @@ public class WorldChenge : MonoBehaviour {
     private GameObject m_player;
 
     [SerializeField]
-    private Vector3 m_playerPos;
+    private GameObject m_normalAreaPos;
 
     private bool m_isParretWorld;
 
@@ -31,12 +31,14 @@ public class WorldChenge : MonoBehaviour {
             //  パレットの世界だったら
             if (m_isParretWorld)
             {
-                m_player.transform.position = m_playerPos;
+                m_player.transform.position = m_normalAreaPos.transform.position;
+                m_player.transform.rotation = m_normalAreaPos.transform.rotation;
                 m_isParretWorld = false;
             }
             else
             {
                 m_player.transform.position = m_parretWorldPos.transform.position;
+                m_player.transform.rotation = m_parretWorldPos.transform.rotation;
                 m_isParretWorld = true;
             }
             
@@ -45,7 +47,8 @@ public class WorldChenge : MonoBehaviour {
         //  通常ワールド状態の座標を保存しておく
         if (m_isParretWorld == false)
         {
-            m_playerPos = m_player.transform.position;
+            m_normalAreaPos.transform.position = m_player.transform.position;
+            m_normalAreaPos.transform.rotation = m_player.transform.rotation;
         }
 
     }

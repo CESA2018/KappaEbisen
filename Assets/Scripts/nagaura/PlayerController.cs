@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    Vector4 m_color;
 
     // Use this for initialization
     void Start()
