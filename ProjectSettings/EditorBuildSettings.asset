@@ -9,23 +9,8 @@ EditorBuildSettings:
     path: Assets/Scene/Title.unity
     guid: 6f5dca46f28df454ca6c61ef4a5e22db
   - enabled: 1
-    path: Assets/Scene/Clear.unity
-    guid: 62c0dfc22359c8141aafe946708dba83
-  - enabled: 1
-<<<<<<< ddcf5070657c57a5ceddf9849f800becefd94d40
-    path: Assets/Scene/murahata/Stage1.unity
-    guid: fd33b8f62009b75489cc10d8090168ac
-=======
-    path: Assets/Scene/murahata/Stage1Back.unity
-    guid: 1e510777c759f804f8f1d822f1cf73dc
-  - enabled: 1
     path: Assets/Scene/murahata/Stage1.unity
     guid: fd33b8f62009b75489cc10d8090168ac
   - enabled: 1
-    path: Assets/Scene/murahata/TutorialStage.unity
-    guid: 5443fd67916e6f54e8cb283f76493e95
-  - enabled: 1
-    path: Assets/Scene/ogisu/Play.unity
-    guid: 65e5d5f7665a7634cbfe4b37c50d8972
->>>>>>> Revert "インクアセットの追加とクリア演出"
-  m_Scenes: []
+    path: Assets/Scene/ogisu/Clear.unity
+    guid: 6b2c0949a3b534d48b1bdb7004f0abae
