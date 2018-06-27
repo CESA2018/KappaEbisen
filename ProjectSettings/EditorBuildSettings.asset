@@ -28,3 +28,4 @@ EditorBuildSettings:
     path: Assets/Scene/ogisu/Play.unity
     guid: 65e5d5f7665a7634cbfe4b37c50d8972
 >>>>>>> Revert "インクアセットの追加とクリア演出"
+  m_Scenes: []
