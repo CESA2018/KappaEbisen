@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
+    [SerializeField]
+    private string sceneName;
+
 
     // Use this for initialization
     void Start()
@@ -23,8 +26,8 @@ public class SceneTransitionManager : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    public void TransPlayScene()
+    public void TransSceneButton()
     {
-        SceneManager.LoadScene("test");
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -24,4 +24,12 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Clear");
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Goal")
+        {
+            SceneManager.LoadScene("Clear");
+        }
+    }
 }

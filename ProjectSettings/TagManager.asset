@@ -9,6 +9,10 @@ TagManager:
   - Bullet
   - Button
   - Object
+  - Gimmick
+  - Fire
+  - Gorl
+  - Goal
   layers:
   - Default
   - TransparentFX

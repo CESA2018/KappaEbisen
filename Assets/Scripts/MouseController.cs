@@ -28,6 +28,7 @@ public class MouseController : MonoBehaviour
     void Start ()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         m_inMirrorWorld = false;
     }
 
