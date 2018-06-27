@@ -11,6 +11,8 @@ public class PlayManager : MonoBehaviour
 
     public GameObject ButtonCanvas;
 
+    public GameObject TextCanvas;
+
     public Scene scene;
 
     // Use this for initialization
@@ -32,6 +34,8 @@ public class PlayManager : MonoBehaviour
         if (ClearFlag)
         {
             ClearMenu();
+
+            TextCanvas.SetActive(true);
         }
     }
 
@@ -41,6 +45,5 @@ public class PlayManager : MonoBehaviour
     private void ClearMenu()
     {
         ButtonCanvas.SetActive(true);
-
     }
 }
